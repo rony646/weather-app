@@ -1,0 +1,39 @@
+.wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.quote {
+    display: flex;
+    justify-content: space-evenly;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.836);
+    color: #ffff;
+    max-width: 430px;
+    text-align: left;
+}
+
+.quote > .reload-icon:active {
+    color: #eeee;
+    transition: all 0.5s;
+    transform: rotate(360deg);
+}
+
+.quote > .reload-icon:hover {
+    font-size: 23px;
+    transition: all 0.3s;
+}
+
+.quote > p {
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.836);
+    font-weight: 800;
+}
+
+.author {
+    font-weight: 800;
+}
+
+@media (max-width: 768px) {
+    .wrapper {
+        flex-direction: column-reverse;
+    }
+}

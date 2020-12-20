@@ -1,13 +1,18 @@
 import React from 'react';
+
+import Quote from '../Components/Quote/Quote'
+
 import './MainPage.css';
 
 const MainPage = props => {
     return(
         <div className="main-page">
-            <p>Here goes the quote</p>
-            <p>weather resume</p>
-            <p>Current temperature</p>
-            <p>Location</p>
+            <Quote />
+            <div className="content">
+                <p>weather resume</p>
+                <p>Current temperature</p>
+                <p>Location</p>
+            </div>
         </div>
     );
 };
