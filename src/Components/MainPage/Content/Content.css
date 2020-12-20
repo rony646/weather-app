@@ -1,0 +1,14 @@
+.content {
+    color: #fff;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.836);
+    font-family: 'Orbitron', sans-serif;
+}
+
+.content > .temperature {
+    font-weight: 900;
+    font-size: 6em;
+}
+
+.content > span {
+    display: block;
+}

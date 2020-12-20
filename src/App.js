@@ -1,15 +1,15 @@
 
 import './App.css';
 
-import MainPage from './Components/MainPage'
+import MainPage from './Components/MainPage/MainPage'
 
 function App() {
   return (
     <div className="container">
       <MainPage />
-      <div>
+      {/*<div>
         <h1>Lower menu</h1>
-      </div>
+      </div>*/}
     </div>
   );
 }

@@ -2,6 +2,8 @@ import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faRedo } from '@fortawesome/free-solid-svg-icons';
 
+import SearchBar from '../SearchBar/SearchBar';
+
 import './Quote.css';
 
 const Quote = props => {
@@ -14,9 +16,7 @@ const Quote = props => {
                 </div>
                 <FontAwesomeIcon icon={faRedo} size="md" style={{margin: "0 10px 0 0 "}} className="reload-icon"/>
             </div>
-            <div>
-                <h5>Search bar</h5>
-            </div>
+            <SearchBar />
         </div>
         
     );
