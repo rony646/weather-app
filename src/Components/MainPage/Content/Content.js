@@ -1,14 +1,28 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { AnimateOnChange } from 'react-animation';
+
+import { WeatherDataContext } from '../../../contexts/WeatherDataContext';
 
 import './Content.css';
 
-const Content = props => {
+const Content = () => {
+
+    const [weatherData, setWeatherData] = useContext(WeatherDataContext);
+
+
+    if(!weatherData) {
+        return <div>Error</div>
+    }
+
     return(
-        <div className="content">
-            <span>IT'S A CLOUDY DAY</span>
-            <span className="temperature">20°</span>
-            <span>IN SÃO PAULO, BRAZIL</span>
-        </div>
+        <AnimateOnChange>
+            <div className="content">
+                <span>{weatherData.weather[0].description.toUpperCase()}</span>
+                <span className="temperature">{weatherData.main.temp.toFixed()}°</span>
+                <span>IN {weatherData.name.toUpperCase()}, {weatherData.sys.country.toUpperCase()}</span>
+            </div>
+        </AnimateOnChange>
+        
     );
 };
 
