@@ -2,7 +2,8 @@ import React from 'react';
 import './App.css';
 
 import { LocationProvider } from './contexts/LocationContext';
-import { WeatherDataProvider } from './contexts/WeatherDataContext'
+import { WeatherDataProvider } from './contexts/WeatherDataContext';
+import { QuoteProvider } from './contexts/QuoteContext';
 
 import MainPage from './Components/MainPage/MainPage';
 
@@ -12,11 +13,14 @@ function App() {
 
   return (
     <div className="container" >
-      <WeatherDataProvider>
+      <QuoteProvider>
+        <WeatherDataProvider>
         <LocationProvider>
           <MainPage />
         </LocationProvider>
-      </WeatherDataProvider>
+        </WeatherDataProvider>
+      </QuoteProvider>
+      
       {/*<div>
         <h1>Lower menu</h1>
       </div>*/}

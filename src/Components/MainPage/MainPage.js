@@ -58,7 +58,7 @@ const MainPage = props => {
                 break;
 
         };
-    };
+    }; // Set the background depeding on the weather
 
     
 

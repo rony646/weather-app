@@ -6,8 +6,6 @@ export const  LocationProvider = props => {
 
     const [location, setLocation] = useState('Sao paulo');
 
-    console.log('A localização agora é: ', location);
-
     return(
         <LocationContext.Provider value={[location, setLocation]}>
             {props.children}

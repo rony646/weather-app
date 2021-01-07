@@ -28,4 +28,4 @@ export default {
     snow: SnowBackground,
     thunderstorm: ThunderStormBackground,
     tornado: TornadoBackground
-}
+};
