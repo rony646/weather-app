@@ -13,6 +13,8 @@ const MainPage = props => {
 
     const [weatherData, setWeatherData] = useContext(WeatherDataContext);
 
+   
+
     let background = Backgrounds.rain;
 
     if(weatherData) {
@@ -64,8 +66,8 @@ const MainPage = props => {
 
     return(
         <div className="main-page" style={{backgroundImage: `url(${background})`}}>
-            <Quote />
-            <Content />
+            <Quote showMore={props.showMore}/>
+            <Content setShowMore={props.setShowMore} showMore={props.showMore}/>
         </div>
     );
 };

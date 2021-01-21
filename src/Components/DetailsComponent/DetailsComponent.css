@@ -1,0 +1,23 @@
+.open {
+    
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    
+    height: 300px;
+}
+
+.open > :nth-child(5) {
+  
+}
+
+.closed {
+    display: none;
+    height: 0%;
+}
+
+@media (max-width: 768px) {
+    .open {
+        height: 80%;
+    }
+}

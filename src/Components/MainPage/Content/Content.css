@@ -1,10 +1,20 @@
 .content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.weather-content {
     color: #fff;
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.836);
     font-family: 'Orbitron', sans-serif;
 }
 
-.content > .temperature {
+.weather-content > span {
+    display: block;
+}
+
+.weather-content > .temperature {
     font-weight: 900;
     font-size: 7em;
 }
@@ -14,6 +24,24 @@
     transition: font-size 0.5s;
 }
 
-.content > span {
-    display: block;
+.button {
+    height: 4em;
+    width: 4em;
+    border: 2px solid rgba(0, 0, 0, 0.63);
+    background-color: rgba(255, 255, 255, 0.692);
+    font-weight: 900;
+    border-radius: 40%;
+    outline: none;
 }
+
+.button:hover {
+    height: 5em;
+    width: 5em;
+    box-shadow: inset 5px 5px 6px rgb(46, 46, 46);
+    transition: 0.3s all;
+}
+
+.button:active {
+    background-color: rgba(230, 228, 228, 0.884);
+}
+

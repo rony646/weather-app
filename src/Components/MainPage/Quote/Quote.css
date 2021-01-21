@@ -3,6 +3,10 @@
     justify-content: space-between;
 }
 
+.hide-on-mobile {
+    display: inline-block;
+}
+
 .quote {
     display: flex;
     justify-content: space-evenly;
@@ -35,5 +39,9 @@
 @media (max-width: 768px) {
     .wrapper {
         flex-direction: column-reverse;
+    }
+
+    .hide-on-mobile {
+        display: none;
     }
 }
