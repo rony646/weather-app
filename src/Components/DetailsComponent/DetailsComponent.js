@@ -9,19 +9,19 @@ const DetailsComponent = props => {
     let content;
 
     if(props.showMore) {
-       content = <div className={props.showMore ? 'open' : 'closed'} style={{transition: 'all 0.5s'}}>
-                    <WeatherCard />
-                    <WeatherCard />
-                    <WeatherCard />
-                    <WeatherCard />
-                    <WeatherCard />
-                </div>
+       content = 2
     }
 
     return(
-        <>
-        {content}
-        </>
+        <div className={props.showMore ? 'open' : 'closed'} style={{transition: 'all 0.5s'}}>
+            <div className="card-wrapper" style={{display: props.showMore ? 'flex' : 'none'}}>
+                <WeatherCard />
+                <WeatherCard />
+                <WeatherCard />
+                <WeatherCard />
+                <WeatherCard />
+            </div>
+        </div>
     );
 };
 
