@@ -1,10 +1,32 @@
 .weather-card {
-    height: 175px;
+    height: 190px;
     width: 160px;
     margin: 8px;
+    padding: 6px;
     background-color: rgba(238, 238, 238, 0.911);
     display: flex;
+    font-family: 'Montserrat', 'open-sans';
     align-items: center;
     flex-direction: column;
     box-shadow: 2px 5px 4px rgba(0, 0, 0, 0.63);
+}
+
+.current-temp {
+    margin: 0;
+    font-size: 52px;
+    font-weight: bolder;
+}
+
+.description {
+    margin: 5px;
+    font-size: 12px;
+}
+
+.min-max {
+    font-size: 14px;
+}
+
+.date {
+    margin-top: 20px;
+    font-size: 16px;
 }

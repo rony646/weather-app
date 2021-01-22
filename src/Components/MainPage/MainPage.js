@@ -12,9 +12,6 @@ import './MainPage.css';
 const MainPage = props => {
 
     const [weatherData, setWeatherData] = useContext(WeatherDataContext);
-
-   
-
     let background = Backgrounds.rain;
 
     if(weatherData) {

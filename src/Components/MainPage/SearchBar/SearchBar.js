@@ -21,7 +21,6 @@ const SearchBar = () => {
     useEffect(() => {
         axios.get(`weather?q=${location}`).
         then(res => {
-            console.log(res.data);
             setWeatherData(res.data);
         })
         .catch(err => {

@@ -2,7 +2,7 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  background-color: rgba(230, 230, 230, 0.733);
+  background-color: #e4e4e4c0;
   height: 100vh;
   margin: 0 auto;
   overflow: auto;

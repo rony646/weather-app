@@ -25,3 +25,4 @@ yarn-error.log*
 
 #api
 API-KEY.js
+API-KEY-LOCATIONIQ.js

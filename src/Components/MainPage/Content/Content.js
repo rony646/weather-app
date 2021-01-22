@@ -11,8 +11,6 @@ const Content = props => {
 
     const [weatherData, setWeatherData] = useContext(WeatherDataContext);
 
-    console.log(props.showMore, 'From content')
-
     if(!weatherData) {
         return <div>Error</div>
     }
