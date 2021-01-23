@@ -4,7 +4,7 @@ import React, { useContext, useEffect, useState } from 'react';
 
 import axios from 'axios';
 import { apiKey } from '../../API-KEY'; // Open weather api key
-import apiKeyLocationIq from '../../API-KEY-LOCATIONIQ.JS'
+import apiKeyLocationIq from '../../API-KEY-LOCATIONIQ';
 import { LocationContext } from '../../contexts/LocationContext';
 import WeatherCard from './WeatherCard/WeatherCard';
 
@@ -13,7 +13,6 @@ import './DetailsComponent.css';
 
 
 const DetailsComponent = props => {
-
     const [renderCards, setRenderCards] = useState(<h1>Loading...</h1>)
 
     const fetchFiveDayWeather = (lat, lon) => {
@@ -45,7 +44,7 @@ const DetailsComponent = props => {
     const [location] = useContext(LocationContext);
     useEffect(() => {
 
-        axios.get(`https://us1.locationiq.com/v1/search.php?key=pk.b28b1ed67d946cbafc8956dfeed7c921&q=${location}&format=json`)
+        axios.get(`https://us1.locationiq.com/v1/search.php?key=${apiKeyLocationIq}&q=${location}&format=json`)
         .then(res => {
             let lat = res.data[0].lat
             let long = res.data[0].lon
