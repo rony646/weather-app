@@ -10,7 +10,6 @@ import DetailsComponent from './Components/DetailsComponent/DetailsComponent';
 
 function App() {
 
-  console.log(window.innerHeight)
 
   const [showMore, setShowMore] = useState(false);
 
@@ -22,7 +21,6 @@ function App() {
 
   return (
     <div className="container" >
-      {console.log(showMore)}
       <QuoteProvider>
         <WeatherDataProvider>
         <LocationProvider>

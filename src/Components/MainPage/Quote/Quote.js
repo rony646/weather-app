@@ -1,6 +1,6 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faEraser, faRedo } from '@fortawesome/free-solid-svg-icons';
+import { faRedo } from '@fortawesome/free-solid-svg-icons';
 
 import { QuoteContext } from '../../../contexts/QuoteContext';
 

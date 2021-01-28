@@ -23,6 +23,6 @@ yarn-debug.log*
 yarn-error.log*
 
 
-#api
-API-KEY.js
-API-KEY-LOCATIONIQ.js
+#api keys
+
+.env

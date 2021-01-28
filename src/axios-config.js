@@ -1,5 +1,6 @@
 import axios from 'axios';
-import { apiKey } from './API-KEY';
+
+const apiKey = process.env.REACT_APP_OPENWEATHER_API_KEY;
 
 const instance = axios.create({
     baseURL: 'https://api.openweathermap.org/data/2.5/',

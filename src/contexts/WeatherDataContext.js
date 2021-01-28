@@ -6,8 +6,6 @@ export const  WeatherDataProvider = props => {
 
     const [weatherData, setWeatherData] = useState();
 
-    console.log('A os dados  agora são: ', weatherData);
-
     return(
         <WeatherDataContext.Provider value={[weatherData, setWeatherData]}>
             {props.children}

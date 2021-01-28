@@ -9,6 +9,8 @@ import Content from './Content/Content'
 
 import './MainPage.css';
 
+
+
 const MainPage = props => {
 
     const [weatherData, setWeatherData] = useContext(WeatherDataContext);
