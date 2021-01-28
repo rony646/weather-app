@@ -5,6 +5,7 @@ import React, { useContext, useEffect, useState } from 'react';
 import axios from 'axios';
 import { LocationContext } from '../../contexts/LocationContext';
 import WeatherCard from './WeatherCard/WeatherCard';
+import API_KEYS from '../../API-KEYS';
 
 import './DetailsComponent.css';
 
@@ -15,15 +16,11 @@ import './DetailsComponent.css';
 const DetailsComponent = props => {
     const [renderCards, setRenderCards] = useState(<h1>Loading...</h1>);
 
-    const API_KEY_LOCATIONIQ = process.env.REACT_APP_LOCATIONIQ_API_KEY;
-    const API_KEY_OPENWEATHERAPI = process.env.REACT_APP_OPENWEATHER_API_KEY;
-
-
     const fetchFiveDayWeather = (lat, lon) => {
 
         // This function fetchs five day weather day from openwweathermap api using a given latitude and longitude values *getting from iqlocaiton api
 
-        axios.get(`https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&units=metric&exclude=hourly,current,minutely&appid=${API_KEY_OPENWEATHERAPI}`)
+        axios.get(`https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&units=metric&exclude=hourly,current,minutely&appid=${API_KEYS.openWeather}`)
         .then(res => {
            let data = res.data.daily.slice(1, 6);
            data = data.map((item, index) => {
@@ -47,7 +44,7 @@ const DetailsComponent = props => {
     const [location] = useContext(LocationContext);
     useEffect(() => {
 
-        axios.get(`https://us1.locationiq.com/v1/search.php?key=${API_KEY_LOCATIONIQ}&q=${location}&format=json`)
+        axios.get(`https://us1.locationiq.com/v1/search.php?key=${API_KEYS.locationIq}&q=${location}&format=json`)
         .then(res => {
             let lat = res.data[0].lat
             let long = res.data[0].lon
