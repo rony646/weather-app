@@ -9,7 +9,7 @@ import axios from 'axios';
 
 import './Quote.css';
 
-const Quote = props => {
+const Quote = () => {
 
     const [quote, setQuote] = useContext(QuoteContext);
 
